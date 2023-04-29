@@ -28,7 +28,7 @@ namespace DotNetCoreSqlDb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<MyDatabaseContext>(options =>
+            services.AddDbContext<MyDBContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
         }
 
